@@ -1,0 +1,23 @@
+version: '2'
+services:
+  php-fpm:
+    image: registry.cn-shenzhen.aliyuncs.com/rarago/php:latest
+    container_name: myfpm
+    volumes:
+      - /home/www/products:/usr/share/nginx/html
+
+  nginx:
+    image: docker.io/nginx
+    container_name: nginx
+    ports:
+      - 80:80
+    volumes:
+      - /home/www/conf/nginx.conf:/etc/nginx/nginx.conf:rw
+      - /home/www/ng_logs:/var/log/nginx:rw
+      - /home/www/conf/conf.d/:/etc/nginx/conf.d/:rw
+      - /home/www/products:/usr/share/nginx/html:rw
+
+  redis:
+     image: redis
+     container_name: redis
+
