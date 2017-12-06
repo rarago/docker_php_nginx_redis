@@ -9,7 +9,7 @@ sh deploy.sh
 目录结构说明：
 
 
-/home/www  #主工作目录
+/home/www  #主工作目录<br>
   ├ ng_logs   # nginx的日志目录
   ├ conf      # nginx的配置目录
   |    ├ conf.d
