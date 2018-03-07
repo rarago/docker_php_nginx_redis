@@ -1,6 +1,13 @@
 # docker_php_nginx_redis
 用compose启动一个nginx+php+redis环境
 
-
+【安装 docker-io】
+【修改docker 仓库地址为阿里云】
+【安装 git】
+【安装 docker-compose】 
+    pip install docker-compose
+   如果出现 urllib3模块找不到，执行
+    pip install requests urllib3 --force --upgrade
+  
 执行shell 文件:
 sh deploy.sh 
