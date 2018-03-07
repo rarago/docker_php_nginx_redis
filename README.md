@@ -2,8 +2,21 @@
 用compose启动一个nginx+php+redis环境
 
 【安装 docker-io】
+
 【修改docker 仓库地址为阿里云】
+    sudo mkdir -p /etc/docker
+    sudo tee /etc/docker/daemon.json <<-'EOF'
+    {
+      "registry-mirrors": ["https://9lmbskbr.mirror.aliyuncs.com"]
+    }
+    EOF
+    sudo systemctl daemon-reload
+    sudo systemctl restart docker
+
+
+
 【安装 git】
+
 【安装 docker-compose】 
     pip install docker-compose
    如果出现 urllib3模块找不到，执行
