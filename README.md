@@ -24,6 +24,7 @@
 
 
 【安装 git】
+
     yum install -y git
 
 【安装 docker-compose】 
