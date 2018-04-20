@@ -3,8 +3,12 @@ services:
   php-fpm:
     image: registry.cn-shenzhen.aliyuncs.com/rarago/php:latest
     container_name: myfpm
+    cap_add:
+      - SYS_PTRACE
     volumes:
-      - /home/www/products:/usr/share/nginx/html
+      - /home/www/products:/usr/share/nginx/html:rw
+      - /home/www/conf/php-conf:/bitnami/php-fpm/conf:rw
+      - /home/www/php_logs:/opt/bitnami/php/logs:rw
 
   nginx:
     image: docker.io/nginx
