@@ -1,8 +1,8 @@
 # docker_php_nginx_redis
-用compose启动一个nginx+php+redis环境
+用compose启动一个nginx+php-fpm+redis+swoole环境(2018/07/18加入了swoole支持)
 
 【安装 docker-io】
-
+  
 【修改docker 仓库地址为阿里云】
 
     sudo mkdir -p /etc/docker
