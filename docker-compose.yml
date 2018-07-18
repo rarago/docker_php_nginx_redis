@@ -1,7 +1,7 @@
 version: '2'
 services:
   php-fpm:
-    image: registry.cn-shenzhen.aliyuncs.com/rarago/php:latest
+    image: registry.cn-shenzhen.aliyuncs.com/rarago/php:180718
     container_name: myfpm
     cap_add:
       - SYS_PTRACE
